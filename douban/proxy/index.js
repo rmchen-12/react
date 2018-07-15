@@ -27,8 +27,9 @@ let requestList = [
 
 requestList.forEach(item => {
   router.get(item, async (ctx, next) => {
-    const sreq = request.get(HOST + ctx.originalUrl);
-    sreq.pipe(ctx); //请求
+    const sreq = await request.get(HOST + ctx.originalUrl);
+    ctx.body = sreq.body;
+    //  sreq.pipe(ctx.response);
     sreq.on("end", (err, res) => {
       console.log(`>>> 拉取${item}成功！！！`);
     });

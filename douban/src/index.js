@@ -7,7 +7,9 @@ import Routes from "./routes";
 import "./style/base.scss";
 
 ReactDOM.render(
-  <Routes />,
+  <Provider store={store}>
+    <Routes />
+  </Provider>,
 
   document.getElementById("root")
 );
