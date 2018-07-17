@@ -71,7 +71,6 @@ class SearchPreview extends React.Component {
       return null;
     }
     let subjects = this.props.data.payload.subjects;
-    console.log(subjects);
     return (
       <div
         className={style.searchPreviewWrapper}
@@ -90,10 +89,6 @@ class SearchPreview extends React.Component {
 class NavBar extends React.Component {
   searchQuery(value) {
     this.props.fetchQuery(value);
-  }
-
-  componentDidUpdate(prevProps, prevState) {
-    console.log("props:", this.props.searchPreview);
   }
 
   debouncedSearch = debounce(this.searchQuery, 300);

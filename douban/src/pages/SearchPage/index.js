@@ -1,3 +1,4 @@
 import { reducer, pageName } from "./reducer";
+import view from "./SearchPage";
 
-export { reducer, pageName };
+export { view, reducer, pageName };
