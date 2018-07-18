@@ -1,0 +1,42 @@
+.global {
+  min-width: 1000px;
+}
+
+.header {
+  color: #fff;
+  text-align: center;
+  font-weight: bold;
+}
+
+.avatar {
+  background-color: #7f7f7f;
+  margin-right: 20px;
+}
+
+.dropDownSpan {
+  color: #fff;
+  cursor: pointer;
+}
+
+.sider {
+  color: #666;
+}
+
+.content {
+  margin-left: 5%;
+  height: 86vh;
+  padding-right: 2%;
+  overflow: auto;
+  text-align: center;
+}
+
+.footer {
+  background-color: #001529;
+  position: fixed;
+  bottom: 0;
+  width: 100vw;
+  min-width: 1000px;
+  text-align: center;
+  font-weight: bold;
+  color: #fff;
+}

@@ -1,52 +1,61 @@
 import React from "react";
-import {
-  BrowserRouter as Router,
-  Route,
-  Switch,
-  Redirect
-} from "react-router-dom";
+import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
+import { Layout } from "antd";
+import style from "./style.scss";
+import SiderComponent from "../component/sider";
+import HeaderComponent from "../component/header";
+import FooterComponent from "../component/footer";
 
-import Header from "../component/header";
-import Footer from "../component/footer";
-import Table from "../page/table";
+import asyncComponent from "../utils/asyncComponent";
+const Table = asyncComponent(() => import("../page/table"));
+const Label = asyncComponent(() => import("../page/label"));
+const Form = asyncComponent(() => import("../page/form"));
+const Carousel = asyncComponent(() => import("../page/carousel"));
+const Shop = asyncComponent(() => import("../page/shop"));
+const Chart = asyncComponent(() => import("../page/chart"));
+const Editor = asyncComponent(() => import("../page/editor"));
+const Upload = asyncComponent(() => import("../page/upload"));
 
-// export default class RouteMap extends React.Component {
-//   updateHandle() {
-//     console.log("router已经改变了");
-//   }
+const { Header, Footer, Sider, Content } = Layout;
 
-//   render() {
-//     return (
-//       <Router>
-//         <React.Fragment>
-//           <Header />
-//           <main>
-//             <Switch>
-//               <Route path="/" exact component={Table} />
-
-//               <Redirect path="/" component={Table} />
-//             </Switch>
-//           </main>
-//           <Footer />
-//         </React.Fragment>
-//       </Router>
-//     );
-//   }
-// }
 const Routes = () => (
-  <Router>
-    <React.Fragment>
-      <Header />
-      <main>
-        <Switch>
-          <Route path="/" exact component={Table} />
-
-          <Redirect path="/" component={Table} />
-        </Switch>
-      </main>
-      <Footer />
-    </React.Fragment>
-  </Router>
+  <Switch>
+    <Route path="/" exact component={Table} />
+    <Route path="/table" component={Table} />
+    <Route path="/label" component={Label} />
+    <Route path="/form" component={Form} />
+    <Route path="/carousel" component={Carousel} />
+    <Route path="/shop" component={Shop} />
+    <Route path="/chart" component={Chart} />
+    <Route path="/editor" component={Editor} />
+    <Route path="/upload" component={Upload} />
+    <Route path="/form" render={() => <div>form</div>} />
+  </Switch>
 );
 
-export default Routes;
+const GlobalLayout = () => {
+  return (
+    <Router>
+      <div className={style.global}>
+        <Layout>
+          <Header className={style.header}>
+            <HeaderComponent />
+          </Header>
+          <Layout>
+            <Sider className={style.sider}>
+              <SiderComponent />
+            </Sider>
+            <Content className={style.content}>
+              <Routes />
+            </Content>
+          </Layout>
+          <Footer className={style.footer}>
+            <FooterComponent />
+          </Footer>
+        </Layout>
+      </div>
+    </Router>
+  );
+};
+
+export default GlobalLayout;
