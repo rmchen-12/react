@@ -17,7 +17,6 @@ const menu = (
     <Menu.Item>
       <Msg />
     </Menu.Item>
-    <Menu.Item />
   </Menu>
 );
 
