@@ -31,6 +31,7 @@ module.exports = {
   // This means they will be the "root" imports that are included in JS bundle.
   // The first two entry points enable "hot" CSS and auto-refreshes for JS.
   entry: [
+    "react-hot-loader/patch",
     // We ship a few polyfills by default:
     require.resolve("./polyfills"),
     // Include an alternative client for WebpackDevServer. A client's job is to
@@ -146,6 +147,7 @@ module.exports = {
                 ["import", { libraryName: "antd", style: "css" }]
                 // 改动: 引入样式为 less
                 //  ['import', { libraryName: 'antd', style: true }],
+                // "react-hot-loader/babel"
               ],
               // This is a feature of `babel-loader` for webpack (not Babel itself).
               // It enables caching results in ./node_modules/.cache/babel-loader/

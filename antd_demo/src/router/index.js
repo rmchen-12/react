@@ -12,6 +12,7 @@ const Label = asyncComponent(() => import("../page/label"));
 const Form = asyncComponent(() => import("../page/form"));
 const Carousel = asyncComponent(() => import("../page/carousel"));
 const Shop = asyncComponent(() => import("../page/shop"));
+const GoodsDetail = asyncComponent(() => import("../page/shop/goods_detail"));
 const Chart = asyncComponent(() => import("../page/chart"));
 const Editor = asyncComponent(() => import("../page/editor"));
 const Upload = asyncComponent(() => import("../page/upload"));
@@ -26,6 +27,7 @@ const Routes = () => (
     <Route path="/form" component={Form} />
     <Route path="/carousel" component={Carousel} />
     <Route path="/shop" component={Shop} />
+    <Route path="/goods_detail" component={GoodsDetail} />
     <Route path="/chart" component={Chart} />
     <Route path="/editor" component={Editor} />
     <Route path="/upload" component={Upload} />

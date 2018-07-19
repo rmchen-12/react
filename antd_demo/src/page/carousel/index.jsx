@@ -1,7 +1,13 @@
 import React from "react";
+import Carousel1 from "./carousel1";
+import Carousel2 from "./carousel2";
+import style from "./style.scss";
 
-export const Component = props => {
-  return <div>{props.children}</div>;
-};
-
-export default Component;
+export default () => (
+  <div className={style.wrapper}>
+    <Carousel1 />
+    <hr />
+    <Carousel2 />
+    <hr />
+  </div>
+);

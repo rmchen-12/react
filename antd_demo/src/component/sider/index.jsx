@@ -16,8 +16,8 @@ class Sider extends React.Component {
         onClick={this.handleClick}
         className={style.menu}
         defaultSelectedKeys={["1"]}
-        defaultOpenKeys={["sub1"]}
         mode="inline"
+        defaultOpenKeys={["sub1", "g2", "sub2", "sub3", "sub4", "sub5"]}
       >
         <SubMenu
           key="sub1"
@@ -53,7 +53,7 @@ class Sider extends React.Component {
           }
         >
           <Menu.Item key="5">
-            <Link to="/shop">获取商品列表</Link>
+            <Link to="/shop">产品展示</Link>
           </Menu.Item>
         </SubMenu>
         <SubMenu
@@ -66,7 +66,7 @@ class Sider extends React.Component {
           }
         >
           <Menu.Item key="6">
-            <Link to="/echarts">echarts图表</Link>
+            <Link to="/chart">echarts图表</Link>
           </Menu.Item>
         </SubMenu>
         <SubMenu

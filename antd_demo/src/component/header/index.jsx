@@ -1,6 +1,7 @@
 import React from "react";
 import { Row, Col, Input, Dropdown, Avatar, Menu, Icon } from "antd";
 import style from "./style.scss";
+import Msg from "../../component/msg";
 
 const menu = (
   <Menu>
@@ -13,7 +14,9 @@ const menu = (
         我的github
       </a>
     </Menu.Item>
-    <Menu.Item />
+    <Menu.Item>
+      <Msg />
+    </Menu.Item>
     <Menu.Item />
   </Menu>
 );
@@ -21,18 +24,14 @@ const menu = (
 export const Component = props => {
   return (
     <Row>
-      <Col span={10}>React+Antd demo</Col>
-      <Col span={8}>
+      <Col span={3}>React+Antd demo</Col>
+      <Col span={8} offset={1}>
         <Input placeholder="请输入。。。" />
       </Col>
-      <Col span={6}>
+      <Col span={3} offset={9}>
         <Avatar icon="user" className={style.avatar} />
         <Dropdown overlay={menu}>
-          <span
-            className="ant-dropdown-link"
-            href="#"
-            className={style.dropDownSpan}
-          >
+          <span className="ant-dropdown-link" href="#">
             rmchen-12<Icon type="down" />
           </span>
         </Dropdown>

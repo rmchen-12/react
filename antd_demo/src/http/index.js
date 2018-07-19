@@ -1,4 +1,4 @@
-import Axios from "_axios@0.18.0@axios";
+import Axios from "axios";
 
 const baseUrl = "https://ws.mammasay.com/";
 
