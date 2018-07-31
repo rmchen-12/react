@@ -2,6 +2,9 @@ import React from "react";
 import style from "./style.less";
 import API from "../../../api";
 import WrapperComponent from "../../../container";
+import { List } from "antd-mobile";
+
+const Item = List.Item;
 
 class RankList extends React.Component {
   state = {
