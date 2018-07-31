@@ -1,0 +1,37 @@
+.hotList {
+  position: relative;
+  //   overflow: hidden;
+  margin-top: 180px;
+  //   height: 667 * 2px - 180px;
+  margin-bottom: 80px;
+  .hotItem {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    .img {
+      flex: 1;
+      img {
+        width: 100px;
+        height: 100px;
+        margin: 10px 0;
+      }
+    }
+    .info {
+      flex: 2;
+      color: #000;
+      .name {
+        overflow: hidden;
+        text-overflow: ellipsis; //文本溢出显示省略号
+        white-space: nowrap; //文本不会换行（单行文本溢出）
+        width: 400px;
+        color: #000;
+      }
+    }
+    .icon {
+      flex: 1;
+      text-align: right;
+      color: #000;
+    }
+  }
+}

@@ -1,0 +1,23 @@
+@import "../../style/index.less";
+
+.navbar {
+  position: fixed;
+  top: 100px;
+  display: flex;
+  justify-content: space-around;
+  align-self: center;
+  height: 80px;
+  width: 100%;
+  z-index: 9;
+  .navItem {
+    flex: 1;
+    text-align: center;
+    color: #000;
+    padding: 20px 0;
+    background-color: #fff;
+  }
+  .active {
+    color: @baseColor;
+    border-bottom: 2px solid @baseColor;
+  }
+}

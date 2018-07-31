@@ -1,0 +1,38 @@
+@import "../../style/index.less";
+
+.show {
+  background-color: @baseColor;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100px;
+  z-index: 999;
+}
+
+.hide {
+  display: none;
+}
+
+.returnBtn {
+}
+
+.title {
+  color: #fff;
+  font-size: 30px;
+  text-align: center;
+  margin: 0;
+  .ellipsis(500px);
+}
+
+.searchBtn {
+  //   padding-right: 20px;
+}
+
+.search {
+  height: 100px;
+}
+
+:global(.am-search-cancel) {
+  color: #fff !important;
+}
